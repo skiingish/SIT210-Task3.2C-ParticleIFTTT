@@ -67,10 +67,10 @@ void loop()
       // do nothing and publish no updates to the isSunny if no changes have been found to effect the state of sunlight
     }
 
-    //publish for monitoring
+    //for monitoring
     String analogvalueString = String(analogvalueAvg, DEC); // create a string from the avg of the sensor reads, (converts a int to a sting with a base)
     Particle.variable("lightValue", &analogvalueAvg, INT);
-    Particle.publish("lightValue", analogvalueString, PRIVATE); // push and publish the data
+    //Particle.publish("lightValue", analogvalueString, PRIVATE); // push and publish the data
   }
 }
 
